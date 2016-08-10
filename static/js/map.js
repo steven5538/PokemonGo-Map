@@ -915,7 +915,7 @@ function createSearchMarker () {
   google.maps.event.addListener(map, "click", function (e) {
 
     //lat and lng is available in e object
-    //marker.setPosition(latLng)
+    marker.setPosition(e.latLng)
     changeSearchLocation(e.latLng.lat(), e.latLng.lng())
       .done(function () {
         oldLocation = null
